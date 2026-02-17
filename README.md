@@ -42,3 +42,8 @@ The application is designed to be easily configurable. You can modify the consta
 ## Project Structure
 
 - `lotto_picker.py`: The main application script containing logic and UI code. 
+---
+
+## Disclaimer
+
+This project is provided "as-is" without any warranty of any kind. I am not responsible for any issues, data loss, or "explosions" (code-related or otherwise) that may occur from using this software. **Use it at your own risk.**
