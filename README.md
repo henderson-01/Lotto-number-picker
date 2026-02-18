@@ -17,20 +17,27 @@ This tool helps users pick lottery numbers by generating a random set of "Main N
 
 - **Python 3.x**
 - **Tkinter**: This is included with most standard Python installations.
-  - *Linux users*: You might need to install it explicitly (e.g., `sudo apt-get install python3-tk`).
+  - *Linux/Ubuntu users*: You might need to install it explicitly along with the virtual environment tool.
+  - Run: `sudo apt update && sudo apt install python3-tk python3-venv -y`
 
 ## Installation & Usage
 
 1.  **Download** the `lotto_picker.py` file to your local machine.
 2.  **Open a terminal** or command prompt.
 3.  **Navigate** to the directory containing the file.
-4.  **Run** the application:
+4.  **Set Up a Virtual Environment (Ubuntu/Linux):**
+    It is best practice to run Python projects in a virtual environment.
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate
+    ```
+5.  **Run** the application:
 
     ```bash
     python lotto_picker.py
     ```
 
-5.  Click the **"Generate Numbers"** button to get a new set of lottery numbers.
+6.  Click the **"Generate Numbers"** button to get a new set of lottery numbers.
 
 ## Configuration
 
