@@ -1,6 +1,8 @@
 # EuroMillions Number Picker
 
-A Python desktop application that generates random numbers for the EuroMillions lottery using a modern, dark-themed Graphical User Interface (GUI).
+A Python desktop application that generates random numbers for the EuroMillions lottery using a modern, dark-themed Graphical User Interface (GUI). 
+
+**Update on the lotto_picker.py has now been updated to Customtkinter (GUI)**
 
 ## Description
 
@@ -8,7 +10,7 @@ This tool helps users pick lottery numbers by generating a random set of "Main N
 
 ## Features
 
-- **GUI Interface**: Built with `tkinter`, featuring a custom dark theme with gold and blue accents.
+- **GUI Interface**: Built with `customtkinter`, featuring a custom dark theme with gold and blue accents.
 - **Random Generation**: Generates 5 unique main numbers and 2 unique lucky stars per click.
 - **Sorted Results**: Numbers are automatically sorted for convenience.
 - **Responsive Design**: The window centers automatically on your screen upon launch.
