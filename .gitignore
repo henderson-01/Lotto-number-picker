@@ -1,16 +1,31 @@
-# Python bytecode
+# --- Python bytecode ---
 __pycache__/
 *.py[cod]
+*$py.class
 
-# Virtual environments
+# --- Virtual environments ---
 venv/
 .venv/
 env/
+# Added: general python distribution folders
+dist/
+build/
+*.egg-info/
 
-# IDE settings
+# --- IDE settings ---
 .vscode/
 .idea/
+# Added: Linux editor swap files (Vim/Gedit)
+*.swp
+*~
 
-# OS metadata
+# --- OS metadata ---
 .DS_Store
-Thumbs.db 
+[Tt]humbs.db
+# Added: Linux directory metadata
+.directory
+.nfs*
+
+# --- Project Specific ---
+# create a .env for secrets
+.env
