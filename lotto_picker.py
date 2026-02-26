@@ -6,7 +6,7 @@ import customtkinter as ctk
 # EuroMillions Rules
 EUROMILLIONS_CONFIG = {
     "main_numbers": {"count": 5, "min": 1, "max": 50},
-    "lucky_stars": {"count": 2, "min": 1, "max": 13},
+    "lucky_stars": {"count": 2, "min": 1, "max": 12},
 }
 
 # UI Styling Constants
