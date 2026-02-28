@@ -1,58 +1,94 @@
-# EuroMillions Number Picker
+# EuroMillions Number Picker (Ubuntu Edition)
 
-A Python desktop application that generates random numbers for the EuroMillions lottery using a modern, dark-themed Graphical User Interface (GUI). 
+A modern, dark-themed Python application for generating EuroMillions lottery numbers. This version uses **CustomTkinter** for a sleek, high-DPI "Dark Mode" aesthetic native to Linux desktops.
 
-**Update on the lotto_picker.py has now been updated to Customtkinter (GUI)**
+## 🚀 Features
 
-## Description
+* **Modern GUI**: Powered by `customtkinter` (a modern wrapper for Tkinter).
+* **EuroMillions Logic**: Generates 5 unique main numbers (1–50) and 2 unique lucky stars (1–12).
+* **Auto-Sorting**: Numbers are displayed in ascending order for easy entry.
+* **Linux Optimized**: Centered window launching with custom gold and blue accents.
 
-This tool helps users pick lottery numbers by generating a random set of "Main Numbers" and "Lucky Stars" based on configurable rules. It ensures all generated numbers are unique within their sets and displays them in an easy-to-read, sorted format.
+## 🛠 Prerequisites (Ubuntu/Debian)
 
-## Features
+Before running the application, you must install the Python UI and environment modules globally on your Ubuntu system:
 
-- **GUI Interface**: Built with `customtkinter`, featuring a custom dark theme with gold and blue accents.
-- **Random Generation**: Generates 5 unique main numbers and 2 unique lucky stars per click.
-- **Sorted Results**: Numbers are automatically sorted for convenience.
-- **Responsive Design**: The window centers automatically on your screen upon launch.
+```bash
+sudo apt update
+sudo apt install python3-tk python3-venv python3-pip -y
 
-## Prerequisites
+```
 
-- **Python 3.x**
-- **Tkinter**: This is included with most standard Python installations.
-  - *Linux/Ubuntu users*: You might need to install it explicitly along with the virtual environment tool.
-  - Run: `sudo apt update && sudo apt install python3-tk python3-venv -y`
+## 📦 Installation & Setup (Step-by-Step)
 
-## Installation & Usage
+### 1. Open Your Terminal
 
-1.  **Download** the `lotto_picker.py` file to your local machine.
-2.  **Open a terminal** or command prompt.
-3.  **Navigate** to the directory containing the file.
-4.  **Set Up a Virtual Environment (Ubuntu/Linux):**
-    It is best practice to run Python projects in a virtual environment.
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-    ```
-5.  **Run** the application:
+You can use either:
 
-    ```bash
-    python lotto_picker.py
-    ```
+* **The Main Ubuntu Terminal**: Press `Ctrl`+`Alt`+`T`.
+* **VS Code Terminal**: Go to `Terminal` > `New Terminal`.
+* *Note: If using VS Code, ensure you have your project folder open first (`File` > `Open Folder`).*
 
-6.  Click the **"Generate Numbers"** button to get a new set of lottery numbers.
 
-## Configuration
 
-The application is designed to be easily configurable. You can modify the constants at the top of `lotto_picker.py` to adjust the rules or styling:
+### 2. Create the Virtual Environment (VENV)
 
-- `EUROMILLIONS_CONFIG`: Change the count, minimum, and maximum values for numbers.
-- `STYLE_CONFIG`: Customize colors, fonts, and window dimensions.
+This creates a "sandbox" folder named `venv` inside your project directory to keep your system clean.
 
-## Project Structure
+```bash
+python3 -m venv venv
 
-- `lotto_picker.py`: The main application script containing logic and UI code. 
+```
+
+### 3. Activate the Environment
+
+This tells your terminal to use the "sandbox" you just created.
+
+```bash
+source venv/bin/activate
+
+```
+
+**How to tell it worked:** Your terminal prompt will now show `(venv)` at the very beginning of the line, like this:
+
+> `(venv) user@ubuntu:~/project$`
+
+### 4. Install CustomTkinter (**Crucial Step**)
+
+**Important:** You must see that `(venv)` prefix before running this. This ensures the library is installed *inside* your project and not globally on your computer.
+
+```bash
+pip install customtkinter
+
+```
+
+### 5. Launch the Picker
+
+While the `(venv)` is still active, run:
+
+```bash
+python3 lotto_picker.py
+
+```
+
+### 6. Finished?
+
+When you are done, you can exit the "sandbox" by typing:
+
+```bash
+deactivate
+
+```
+
+## ⚙️ Configuration
+
+The script is designed to be modified. Open `lotto_picker.py` in your editor (Gedit, VS Code, etc.) to tweak:
+
+* **`EUROMILLIONS_CONFIG`**: Change the number ranges or count.
+* **`STYLE_CONFIG`**: Adjust HEX color codes and window dimensions.
+
 ---
 
-## Disclaimer
+## ⚠️ Disclaimer
 
-This project is provided "as-is" without any warranty of any kind. I am not responsible for any issues, data loss, or "explosions" (code-related or otherwise) that may occur from using this software. **Use it at your own risk.**
+This project is provided "as-is" without warranty. I am not responsible for any issues, data loss, or "explosions" (code-related or otherwise) that may occur. **Use at your own risk.**
