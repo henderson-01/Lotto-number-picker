@@ -12,7 +12,7 @@ EUROMILLIONS_CONFIG = {
 # UI Styling Constants
 STYLE_CONFIG = {
     "numbers_color": "#1f538d",  # Custom blue for main numbers
-    "stars_color": "#cc9900",    # Gold for lucky stars
+    "stars_color": "#cc9900",  # Gold for lucky stars
     "title_font": ("Helvetica", 24, "bold"),
     "label_font": ("Helvetica", 14, "bold"),
     "number_font": ("Helvetica", 18, "bold"),
@@ -53,7 +53,7 @@ class LottoApp:
         title_label = ctk.CTkLabel(
             self.window,
             text="EuroMillions Number Picker",
-            font=self.style["title_font"]
+            font=self.style["title_font"],
         )
         title_label.pack(pady=(30, 10))
 
@@ -66,7 +66,7 @@ class LottoApp:
             results_frame,
             "Your Numbers",
             self.lottery_config["main_numbers"]["count"],
-            self.style["numbers_color"]
+            self.style["numbers_color"],
         )
 
         # Display for the lucky stars
@@ -74,7 +74,7 @@ class LottoApp:
             results_frame,
             "Lucky Stars",
             self.lottery_config["lucky_stars"]["count"],
-            self.style["stars_color"]
+            self.style["stars_color"],
         )
 
         # Action Button
@@ -83,7 +83,7 @@ class LottoApp:
             text="Generate Numbers",
             command=self.generate_and_display_numbers,
             font=self.style["label_font"],
-            height=50
+            height=50,
         )
         pick_button.pack(padx=20, pady=(10, 30), fill="x")
 
@@ -92,9 +92,7 @@ class LottoApp:
 
         # Section Label
         section_label = ctk.CTkLabel(
-            parent,
-            text=label_text,
-            font=self.style["label_font"]
+            parent, text=label_text, font=self.style["label_font"]
         )
         section_label.pack(pady=(15, 5))
 
@@ -112,7 +110,7 @@ class LottoApp:
                 fg_color=color,
                 text_color="white",
                 corner_radius=8,
-                font=self.style["number_font"]
+                font=self.style["number_font"],
             )
             num_label.pack(side="left", padx=5)
             labels.append(num_label)
@@ -126,11 +124,11 @@ class LottoApp:
         """Generates numbers and updates the CTk labels."""
         main_cfg = self.lottery_config["main_numbers"]
         numbers = self._pick_numbers(
-            main_cfg["count"], main_cfg["min"], main_cfg["max"])
+            main_cfg["count"], main_cfg["min"], main_cfg["max"]
+        )
 
         star_cfg = self.lottery_config["lucky_stars"]
-        stars = self._pick_numbers(
-            star_cfg["count"], star_cfg["min"], star_cfg["max"])
+        stars = self._pick_numbers(star_cfg["count"], star_cfg["min"], star_cfg["max"])
 
         # Update Main Numbers
         for label, num in zip(self.number_labels, numbers):
@@ -143,7 +141,7 @@ class LottoApp:
 
 def main():
     root = ctk.CTk()
-    app = LottoApp(root, EUROMILLIONS_CONFIG, STYLE_CONFIG)
+    LottoApp(root, EUROMILLIONS_CONFIG, STYLE_CONFIG)
     root.mainloop()
 
 
