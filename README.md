@@ -27,16 +27,14 @@ You can use either:
 
 * **The Main Ubuntu Terminal**: Press `Ctrl`+`Alt`+`T`.
 * **VS Code Terminal**: Go to `Terminal` > `New Terminal`.
-* *Note: If using VS Code, ensure you have your project folder open first (`File` > `Open Folder`).*
+* **CD to the lotto number picker folder** Or just right click the folder and open in terminal.
 
+### 2. Create the Virtual Environment
 
-
-### 2. Create the Virtual Environment (VENV)
-
-This creates a "sandbox" folder named `venv` inside your project directory to keep your system clean.
+This creates a "sandbox" folder named `.venv` inside your project directory to keep your system clean.
 
 ```bash
-python3 -m venv venv
+python3 -m venv .venv
 
 ```
 
@@ -45,17 +43,17 @@ python3 -m venv venv
 This tells your terminal to use the "sandbox" you just created.
 
 ```bash
-source venv/bin/activate
+source .venv/bin/activate
 
 ```
 
-**How to tell it worked:** Your terminal prompt will now show `(venv)` at the very beginning of the line, like this:
+**How to tell it worked:** Your terminal prompt will now show `(.venv)` at the very beginning of the line, something like this:
 
-> `(venv) user@ubuntu:~/project$`
+> `(.venv) user@ubuntu:~/lotto number picker$`
 
 ### 4. Install CustomTkinter (**Crucial Step**)
 
-**Important:** You must see that `(venv)` prefix before running this. This ensures the library is installed *inside* your project and not globally on your computer.
+**Important:** You must see that `(.venv)` prefix before running this. This ensures the library is installed *inside* your project and not globally on your computer.
 
 ```bash
 pip install customtkinter
@@ -64,7 +62,7 @@ pip install customtkinter
 
 ### 5. Launch the Picker
 
-While the `(venv)` is still active, run:
+While the `(.venv)` is still active, run:
 
 ```bash
 python3 lotto_picker.py
