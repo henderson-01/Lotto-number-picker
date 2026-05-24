@@ -47,13 +47,15 @@ source .venv/bin/activate
 
 ```
 
-**How to tell it worked:** Your terminal prompt will now show `(.venv)` at the very beginning of the line, something like this:
-
+> [!NOTE]
+> **How to tell it worked:** Your terminal prompt will now show `(.venv)` at the very beginning of the line, something like this: 👇
+>
 > `(.venv) user@ubuntu:~/lotto number picker$`
 
 ### 4. Install CustomTkinter (**Crucial Step**)
 
-**Important:** You must see that `(.venv)` prefix before running this. This ensures the library is installed *inside* your project and not globally on your computer.
+>[!IMPORTANT]
+>**You must see that `(.venv)` prefix before running this.** This ensures the library is installed *inside* your project and not globally on your computer.
 
 ```bash
 pip install customtkinter
@@ -89,4 +91,5 @@ The script is designed to be modified. Open `lotto_picker.py` in your editor (Ge
 
 ## ⚠️ Disclaimer
 
-This project is provided "as-is" without warranty. I am not responsible for any issues, data loss, or "explosions" (code-related or otherwise) that may occur. **Use at your own risk.**
+> [!CAUTION]
+> This project is provided "as-is" without warranty. I am not responsible for any issues, data loss, or "explosions" (code-related or otherwise) that may occur. **Use at your own risk.**
