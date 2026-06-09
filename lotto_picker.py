@@ -1,4 +1,5 @@
 import random
+
 import customtkinter as ctk
 
 # --- Configuration ---
@@ -16,6 +17,8 @@ STYLE_CONFIG = {
     "title_font": ("Helvetica", 24, "bold"),
     "label_font": ("Helvetica", 14, "bold"),
     "number_font": ("Helvetica", 18, "bold"),
+    "window_width": 480,
+    "window_height": 520,
 }
 
 
@@ -38,7 +41,17 @@ class LottoApp:
     def _setup_window(self):
         """Configures the main application window."""
         self.window.title("EuroMillions Picker")
-        self.window.geometry("480x520")
+
+        # Get dimensions from config and center the window
+        width = self.style.get("window_width", 480)
+        height = self.style.get("window_height", 520)
+
+        screen_width = self.window.winfo_screenwidth()
+        screen_height = self.window.winfo_screenheight()
+        x = (screen_width // 2) - (width // 2)
+        y = (screen_height // 2) - (height // 2)
+
+        self.window.geometry(f"{width}x{height}+{int(x)}+{int(y)}")
         self.window.resizable(False, False)
 
         # CTk specific theme settings
