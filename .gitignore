@@ -1,31 +1,66 @@
-# --- Python bytecode ---
+# --- Python Caches & Compiled files ---
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
+.ruff_cache/
+.mypy_cache/
 
-# --- Virtual environments ---
+# --- Virtual Environments & Secrets ---
 venv/
 .venv/
 env/
-# Added: general python distribution folders
+.env
+.env.*
+# Backup folders created by some Linux tools
+[Bb]ackup/
+
+# --- Distribution / Build ---
 dist/
 build/
 *.egg-info/
+*.egg
 
-# --- IDE settings ---
-.vscode/
-.idea/
-# Added: Linux editor swap files (Vim/Gedit)
-*.swp
-*~
+# --- Logs & Databases ---
+*.log
+*.sqlite3
 
-# --- OS metadata ---
+# --- Testing & Coverage ---
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# --- Jupyter / IPython ---
+.ipynb_checkpoints/
+
+# --- Markdownlint ---
+.markdownlint_cache/
+.markdownlint-cli2/
+
+# --- System / OS ---
 .DS_Store
-[Tt]humbs.db
-# Added: Linux directory metadata
 .directory
 .nfs*
+.fuse_hidden*
+*.swp
+*~
+.Trash-*
+Thumbs.db
+.AppleDouble
+.LSOverride
+._*
 
-# --- Project Specific ---
-# create a .env for secrets
-.env
+# --- VS Code ---
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+*.code-workspace
+
+# --- JetBrains (PyCharm, etc.) ---
+.idea/
+
+# --- Bash ---
+*.bak
+*.orig
