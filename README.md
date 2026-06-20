@@ -71,6 +71,10 @@ python3 lotto_picker.py
 
 ```
 
+### Screenshot of App
+
+![Lotto number picker Screenshot](./image/Screenshot.png)
+
 ### 6. Finished?
 
 When you are done, you can exit the "sandbox" by typing:
