@@ -1,8 +1,8 @@
 import random
 
 import customtkinter as ctk
+from typing import List
 
-# --- Configuration ---
 
 # EuroMillions Rules
 EUROMILLIONS_CONFIG = {
@@ -20,6 +20,11 @@ STYLE_CONFIG = {
     "window_width": 480,
     "window_height": 520,
 }
+
+
+def pick_numbers(count: int, min_val: int, max_val: int) -> List[int]:
+    """Picks a sorted list of unique numbers."""
+    return sorted(random.sample(range(min_val, max_val + 1),count))
 
 
 class LottoApp:
@@ -129,26 +134,22 @@ class LottoApp:
             labels.append(num_label)
         return labels
 
-    def _pick_numbers(self, count, min_val, max_val):
-        """Picks a sorted list of unique numbers."""
-        return sorted(random.sample(range(min_val, max_val + 1), count))
-
     def generate_and_display_numbers(self):
         """Generates numbers and updates the CTk labels."""
         main_cfg = self.lottery_config["main_numbers"]
-        numbers = self._pick_numbers(
+        numbers: List[int] = pick_numbers(
             main_cfg["count"], main_cfg["min"], main_cfg["max"]
         )
 
         star_cfg = self.lottery_config["lucky_stars"]
-        stars = self._pick_numbers(star_cfg["count"], star_cfg["min"], star_cfg["max"])
+        stars = pick_numbers(star_cfg["count"], star_cfg["min"], star_cfg["max"])
 
         # Update Main Numbers
-        for label, num in zip(self.number_labels, numbers):
+        for label, num in zip (self.number_labels, numbers):
             label.configure(text=str(num))
 
         # Update Stars
-        for label, star in zip(self.star_labels, stars):
+        for label, star in zip (self.star_labels, stars):
             label.configure(text=str(star))
 
 
