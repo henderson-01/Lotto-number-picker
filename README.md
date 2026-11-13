@@ -26,7 +26,7 @@ A modern, dark-themed Python application for generating EuroMillions lottery num
 Open a terminal (Terminal on macOS/Linux, PowerShell on Windows) and navigate to the project folder:
 
 ```bash
-cd lotto-number-picker
+cd Lotto-number-picker
 ```
 
 ### 1. Sync the Environment
@@ -43,7 +43,7 @@ uv sync
 ### 2. Launch the Picker
 
 ```bash
-uv run lotto_picker.py
+uv run Lotto_picker.py
 ```
 
 > [!NOTE]
