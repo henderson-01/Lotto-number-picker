@@ -2,7 +2,6 @@ import random
 
 import customtkinter as ctk
 
-
 # EuroMillions Rules
 EUROMILLIONS_CONFIG = {
     "main_numbers": {"count": 5, "min": 1, "max": 50},
@@ -23,7 +22,7 @@ STYLE_CONFIG = {
 
 def pick_numbers(count: int, min_val: int, max_val: int) -> list[int]:
     """Picks a sorted list of unique numbers."""
-    return sorted(random.sample(range(min_val, max_val + 1),count))
+    return sorted(random.SystemRandom().sample(range(min_val, max_val + 1), count))
 
 
 class LottoApp:
