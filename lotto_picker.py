@@ -1,7 +1,6 @@
 import random
 
 import customtkinter as ctk
-from typing import List
 
 
 # EuroMillions Rules
@@ -22,7 +21,7 @@ STYLE_CONFIG = {
 }
 
 
-def pick_numbers(count: int, min_val: int, max_val: int) -> List[int]:
+def pick_numbers(count: int, min_val: int, max_val: int) -> list[int]:
     """Picks a sorted list of unique numbers."""
     return sorted(random.sample(range(min_val, max_val + 1),count))
 
@@ -137,7 +136,7 @@ class LottoApp:
     def generate_and_display_numbers(self):
         """Generates numbers and updates the CTk labels."""
         main_cfg = self.lottery_config["main_numbers"]
-        numbers: List[int] = pick_numbers(
+        numbers: list[int] = pick_numbers(
             main_cfg["count"], main_cfg["min"], main_cfg["max"]
         )
 
